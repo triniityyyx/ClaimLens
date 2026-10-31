@@ -1,112 +1,112 @@
 {
   "model_type": "Logistic Regression with TF-IDF Vectorizer",
-  "training_timestamp": "2026-10-25 12:23:35 UTC",
-  "total_samples": 64,
-  "train_samples": 48,
-  "test_samples": 16,
+  "training_timestamp": "2026-10-31 04:48:17 UTC",
+  "total_samples": 38627,
+  "train_samples": 28970,
+  "test_samples": 9657,
   "metrics": {
-    "accuracy": 0.6875,
-    "precision": 0.7143,
-    "recall": 0.625,
-    "f1_score": 0.6667,
+    "accuracy": 0.9884,
+    "precision": 0.9847,
+    "recall": 0.9943,
+    "f1_score": 0.9895,
     "confusion_matrix": [
       [
-        6,
-        2
+        4278,
+        82
       ],
       [
-        3,
-        5
+        30,
+        5267
       ]
     ]
   },
   "top_features": {
     "real_indicators": [
       {
-        "term": "new",
-        "weight": 0.1915
+        "term": "reuters",
+        "weight": 21.6135
       },
       {
-        "term": "trade",
-        "weight": 0.1732
+        "term": "said",
+        "weight": 11.6324
       },
       {
-        "term": "space",
-        "weight": 0.1614
+        "term": "washington reuters",
+        "weight": 8.7384
       },
       {
-        "term": "domestic",
-        "weight": 0.1609
+        "term": "president donald",
+        "weight": 5.0539
       },
       {
-        "term": "moderate",
-        "weight": 0.148
+        "term": "washington",
+        "weight": 4.8897
       },
       {
-        "term": "federal",
-        "weight": 0.1416
+        "term": "wednesday",
+        "weight": 4.326
       },
       {
-        "term": "percent",
-        "weight": 0.1367
+        "term": "reuters president",
+        "weight": 4.2201
       },
       {
-        "term": "bank",
-        "weight": 0.1284
+        "term": "tuesday",
+        "weight": 4.1332
       },
       {
-        "term": "expanded",
-        "weight": 0.1214
+        "term": "thursday",
+        "weight": 3.952
       },
       {
-        "term": "driven",
-        "weight": 0.1214
+        "term": "friday",
+        "weight": 3.6335
       }
     ],
     "fake_indicators": [
       {
-        "term": "human",
-        "weight": 0.2205
+        "term": "read",
+        "weight": 5.9688
       },
       {
-        "term": "secret",
-        "weight": 0.2152
+        "term": "image",
+        "weight": 5.7637
       },
       {
-        "term": "shocking",
-        "weight": 0.2005
+        "term": "featured image",
+        "weight": 5.7293
       },
       {
-        "term": "private",
-        "weight": 0.1867
+        "term": "featured",
+        "weight": 5.6914
       },
       {
-        "term": "exclusive",
-        "weight": 0.1866
+        "term": "just",
+        "weight": 5.3604
       },
       {
-        "term": "leaked",
-        "weight": 0.1805
+        "term": "gop",
+        "weight": 4.4521
       },
       {
-        "term": "drinking",
-        "weight": 0.1764
+        "term": "obama",
+        "weight": 4.3631
       },
       {
-        "term": "ancient",
-        "weight": 0.1709
+        "term": "president trump",
+        "weight": 4.2585
       },
       {
-        "term": "citizens",
-        "weight": 0.1567
+        "term": "america",
+        "weight": 4.0567
       },
       {
-        "term": "alter",
-        "weight": 0.1548
+        "term": "getty",
+        "weight": 3.8582
       }
     ]
   },
-  "vocabulary_size": 2046,
+  "vocabulary_size": 10000,
   "label_mapping": {
     "1": "LIKELY REAL",
     "0": "LIKELY FAKE"
