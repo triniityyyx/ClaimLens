@@ -1,0 +1,343 @@
+/*
+ * ClaimLens — Ink + Acid Lime Design System
+ * Independent investigative journalism aesthetic combined with modern editorial tech.
+ */
+
+:root {
+  --bg-primary: #161616;
+  --bg-secondary: #242424;
+  --surface-elevated: #30302A;
+  --text-primary: #F2EEE5;
+  --text-secondary: #B8B8B2;
+  --accent-lime: #DFFF62;
+  --accent-lime-hover: #CBEB48;
+  --border-color: #45453F;
+  --status-positive: #58D68D;
+  --status-negative: #FF5A5A;
+  --status-neutral: #E0C870;
+  --font-editorial: "Georgia", "Cambria", "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "Consolas", "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Global Reset & Body */
+.stApp {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+}
+
+/* Streamlit Header & Toolbar Overrides */
+header[data-testid="stHeader"] {
+  background-color: var(--bg-primary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Main Container Spacing */
+.block-container {
+  padding-top: 2rem !important;
+  padding-bottom: 4rem !important;
+  max-width: 1080px !important;
+}
+
+/* Typography */
+h1, h2, h3, .editorial-heading {
+  font-family: var(--font-editorial) !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0.5rem !important;
+}
+
+h1 {
+  font-size: 2.4rem !important;
+  line-height: 1.15 !important;
+}
+
+h2 {
+  font-size: 1.75rem !important;
+  line-height: 1.25 !important;
+}
+
+h3 {
+  font-size: 1.3rem !important;
+  line-height: 1.3 !important;
+}
+
+p, li, label, div {
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.text-muted {
+  color: var(--text-secondary) !important;
+  font-size: 0.92rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-lime);
+  margin-bottom: 0.4rem;
+}
+
+/* Header & Wordmark */
+.claimlens-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lens-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: var(--accent-lime);
+  color: #161616;
+  font-weight: 900;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.brand-title {
+  font-family: var(--font-editorial);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1;
+}
+
+.brand-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-lime);
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+/* Cards & Surfaces */
+.lens-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.15s ease;
+}
+
+.lens-card:hover {
+  border-color: #5A5A52;
+}
+
+.lens-card-elevated {
+  background-color: var(--surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Result Badges */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
+.badge-real {
+  background-color: rgba(88, 214, 141, 0.15);
+  color: var(--status-positive);
+  border: 1px solid rgba(88, 214, 141, 0.4);
+}
+
+.badge-fake {
+  background-color: rgba(255, 90, 90, 0.15);
+  color: var(--status-negative);
+  border: 1px solid rgba(255, 90, 90, 0.4);
+}
+
+.badge-unverified {
+  background-color: rgba(224, 200, 112, 0.15);
+  color: var(--status-neutral);
+  border: 1px solid rgba(224, 200, 112, 0.4);
+}
+
+.badge-relevant {
+  background-color: rgba(223, 255, 98, 0.15);
+  color: var(--accent-lime);
+  border: 1px solid rgba(223, 255, 98, 0.35);
+}
+
+.badge-possible {
+  background-color: rgba(224, 200, 112, 0.12);
+  color: #E2CE7D;
+  border: 1px solid rgba(224, 200, 112, 0.3);
+}
+
+.badge-irrelevant {
+  background-color: rgba(184, 184, 178, 0.1);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+/* Navigation Tabs & Sidebar */
+section[data-testid="stSidebar"] {
+  background-color: var(--bg-secondary) !important;
+  border-right: 1px solid var(--border-color) !important;
+}
+
+section[data-testid="stSidebar"] .stRadio > div {
+  gap: 0.4rem;
+}
+
+section[data-testid="stSidebar"] .stRadio label {
+  padding: 0.5rem 0.8rem !important;
+  border-radius: 6px !important;
+  transition: all 0.15s ease !important;
+  border: 1px solid transparent !important;
+  color: var(--text-secondary) !important;
+}
+
+section[data-testid="stSidebar"] .stRadio label:hover {
+  background-color: var(--surface-elevated) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Buttons */
+.stButton > button {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+  padding: 0.5rem 1.25rem !important;
+  font-weight: 600 !important;
+  font-size: 0.92rem !important;
+  transition: all 0.15s ease !important;
+}
+
+.stButton > button:hover {
+  border-color: var(--accent-lime) !important;
+  color: var(--accent-lime) !important;
+}
+
+.stButton > button:active {
+  transform: translateY(1px);
+}
+
+/* Primary Action Button (Acid Lime) */
+.primary-btn .stButton > button {
+  background-color: var(--accent-lime) !important;
+  color: #161616 !important;
+  border: 1px solid var(--accent-lime) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.primary-btn .stButton > button:hover {
+  background-color: var(--accent-lime-hover) !important;
+  border-color: var(--accent-lime-hover) !important;
+  color: #161616 !important;
+}
+
+/* Inputs & Textareas */
+.stTextArea textarea {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+  font-family: var(--font-sans) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.5 !important;
+  padding: 0.75rem !important;
+}
+
+.stTextArea textarea:focus {
+  border-color: var(--accent-lime) !important;
+  box-shadow: 0 0 0 1px var(--accent-lime) !important;
+}
+
+.stTextInput input {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+}
+
+.stTextInput input:focus {
+  border-color: var(--accent-lime) !important;
+  box-shadow: 0 0 0 1px var(--accent-lime) !important;
+}
+
+/* Metrics & Stats */
+div[data-testid="stMetricValue"] {
+  font-family: var(--font-editorial) !important;
+  color: var(--accent-lime) !important;
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+}
+
+div[data-testid="stMetricLabel"] {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Tables & Dataframes */
+.stDataFrame {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+}
+
+/* Custom Horizontal Divider */
+.editorial-hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 1.75rem 0;
+}
+
+/* Step Number Box */
+.step-number {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-lime);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.lens-footer {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}

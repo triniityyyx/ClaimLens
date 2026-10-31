@@ -1,0 +1,24 @@
+# Python cache and environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+env/
+ENV/
+.venv
+
+# SQLite database local file
+claimlens.db
+claimlens.db-shm
+claimlens.db-wal
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Streamlit config
+.streamlit/
+*.db
+*.sqlite3

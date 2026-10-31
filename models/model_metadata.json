@@ -1,0 +1,114 @@
+{
+  "model_type": "Logistic Regression with TF-IDF Vectorizer",
+  "training_timestamp": "2026-10-25 12:23:35 UTC",
+  "total_samples": 64,
+  "train_samples": 48,
+  "test_samples": 16,
+  "metrics": {
+    "accuracy": 0.6875,
+    "precision": 0.7143,
+    "recall": 0.625,
+    "f1_score": 0.6667,
+    "confusion_matrix": [
+      [
+        6,
+        2
+      ],
+      [
+        3,
+        5
+      ]
+    ]
+  },
+  "top_features": {
+    "real_indicators": [
+      {
+        "term": "new",
+        "weight": 0.1915
+      },
+      {
+        "term": "trade",
+        "weight": 0.1732
+      },
+      {
+        "term": "space",
+        "weight": 0.1614
+      },
+      {
+        "term": "domestic",
+        "weight": 0.1609
+      },
+      {
+        "term": "moderate",
+        "weight": 0.148
+      },
+      {
+        "term": "federal",
+        "weight": 0.1416
+      },
+      {
+        "term": "percent",
+        "weight": 0.1367
+      },
+      {
+        "term": "bank",
+        "weight": 0.1284
+      },
+      {
+        "term": "expanded",
+        "weight": 0.1214
+      },
+      {
+        "term": "driven",
+        "weight": 0.1214
+      }
+    ],
+    "fake_indicators": [
+      {
+        "term": "human",
+        "weight": 0.2205
+      },
+      {
+        "term": "secret",
+        "weight": 0.2152
+      },
+      {
+        "term": "shocking",
+        "weight": 0.2005
+      },
+      {
+        "term": "private",
+        "weight": 0.1867
+      },
+      {
+        "term": "exclusive",
+        "weight": 0.1866
+      },
+      {
+        "term": "leaked",
+        "weight": 0.1805
+      },
+      {
+        "term": "drinking",
+        "weight": 0.1764
+      },
+      {
+        "term": "ancient",
+        "weight": 0.1709
+      },
+      {
+        "term": "citizens",
+        "weight": 0.1567
+      },
+      {
+        "term": "alter",
+        "weight": 0.1548
+      }
+    ]
+  },
+  "vocabulary_size": 2046,
+  "label_mapping": {
+    "1": "LIKELY REAL",
+    "0": "LIKELY FAKE"
+  }
+}
